@@ -12,13 +12,13 @@ import logging
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'projectile',
-        'USER': 'projectile',
-        'PASSWORD': 'Cj405kw7H2b5KW',
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database_name',
+        'USER': 'user_name',
+        'PASSWORD': 'user_password',
         'HOST': '127.0.0.1',
-#        'PORT': '5432',
+#        'PORT': '5432', # for some reasons you should add port
         }
 }
 
@@ -43,14 +43,6 @@ DEV = True
 
 SECRET_KEY = '_^(m436@a$omj4(4(-xep&!0&i-%c4#^ag55!(m9%nsnta=66a'
 
-# Uncomment these to activate and customize Celery:
-# CELERY_ALWAYS_EAGER = False  # required to activate celeryd
-# BROKER_HOST = 'localhost'
-# BROKER_PORT = 5672
-# BROKER_USER = 'django'
-# BROKER_PASSWORD = 'django'
-# BROKER_VHOST = 'django'
-# CELERY_RESULT_BACKEND = 'amqp'
 
 ## Log settings
 
@@ -69,8 +61,8 @@ LOGGING = {
 }
 
 # Common Event Format logging parameters
-#CEF_PRODUCT = 'c300'
-#CEF_VENDOR = 'Your Company'
+#CEF_PRODUCT = 'you_product'
+#CEF_VENDOR = 'your Company'
 #CEF_VERSION = '0'
 #CEF_DEVICE_VERSION = '0'
 
@@ -85,4 +77,4 @@ INTERNAL_IPS = ('127.0.0.1')
 
 SERVER_EMAIL = "webmaster@example.com"
 DEFAULT_FROM_EMAIL = "webmaster@example.com"
-SYSTEM_EMAIL_PREFIX = "[c300]"
+SYSTEM_EMAIL_PREFIX = "[prefix]"

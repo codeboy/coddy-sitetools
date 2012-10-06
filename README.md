@@ -1,4 +1,45 @@
 coddy-sitetools
 ===============
 
-Tools for my site, like - blog, cms, twitter aggregation, open social and other cool stuf :)
+Tools for my site, like - blog, cms, twitter aggregation, open social and other cool stuff :)
+Work in progress. I planed make some stable version in future.
+
+
+About this project.
+
+I want to bring together the components that I use at work.
+Here's a list:
+coddy-site : application that keep everything working together
+coddy-blog : i think this is a blog app
+
+There are things that i just plan to add in the future:
+authority - user profiles and authorisation tools
+catalog - catalog i guess
+imaginary - tool that i used for work with images
+userpic - app for generate and add logo for users
+links - links aggregator
+twitter - twitter ;)
+
+
+Installation.
+
+For work you will need:
+- Python 2.7
+- Django (latest)
+- django-south
+- django-treebeard
+- django-debug-toolbar
+- django-crispy_forms
+
+You can install it like pip install -r project-directory/requirements/dev.txt
+
+For user profile work you may need to edit this
+CUSTOM_USER_MODEL = 'users_app.users.ConsumerProfile'
+AUTH_PROFILE_MODULE = 'users_app.users.ConsumerProfile'
+AUTHENTICATION_BACKENDS = [
+    'user_app.users.ConsumerBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+End edit login url
+LOGIN_URL = '/you-site/login/'

@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-This is an example settings/local.py file.
-These settings overrides what's in settings/base.py
-"""
 
 import logging
 
@@ -14,9 +10,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'projectile',
-        'USER': 'projectile',
-        'PASSWORD': 'Cj405kw7H2b5KW',
+        'NAME': 'sitetools',
+        'USER': 'sitetools',
+        'PASSWORD': 'cF40ekw7t2b5KW',
         'HOST': '127.0.0.1',
 #        'PORT': '5432',
         }

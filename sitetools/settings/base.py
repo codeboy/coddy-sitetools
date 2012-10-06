@@ -16,7 +16,7 @@ MINIFY_BUNDLES = {
     'js': {
         'libs_js': (
             'js/libs/jquery-1.6.2.min.js',
-            'js/libs/modernizr-2.0.6.min.js',
+#            'js/libs/modernizr-2.0.6.min.js',
         ),
     }
 }
@@ -66,13 +66,10 @@ INSTALLED_APPS = [
     'south',
 
     # Application base, containing global templates.
-    'projectile.apidriver',
-    'projectile.baseapp',
-    'projectile.consumers',
-    'projectile.jproject',
-    'projectile.jtask',
 
     # Local apps, referenced via REFERENCE_NAME.appname
+    'sitetools.coddy-site',
+    'sitetools.coddy-blog',
 ]
 
 # Place bcrypt first in the list, so it will be the default password hashing
@@ -196,8 +193,8 @@ FILE_UPLOAD_PERMISSIONS = 0664
 # The WSGI Application to use for runserver
 #WSGI_APPLICATION = 'c300.wsgi.application'
 
-CUSTOM_USER_MODEL = 'projectile.consumers.ConsumerProfile'
-LOGIN_URL = '/baseapp/login/'
+#CUSTOM_USER_MODEL = 'projectile.consumers.ConsumerProfile'
+LOGIN_URL = '/coddy-site/login/'
 
 AUTH_PROFILE_MODULE = 'projectile.consumers.ConsumerProfile'
 AUTHENTICATION_BACKENDS = [
