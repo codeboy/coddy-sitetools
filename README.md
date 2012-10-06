@@ -36,12 +36,14 @@ For work you will need:
 You can install it like pip install -r project-directory/requirements/dev.txt
 
 For user profile work you may need to edit this
+<pre><code>
 CUSTOM_USER_MODEL = 'users_app.users.ConsumerProfile'
 AUTH_PROFILE_MODULE = 'users_app.users.ConsumerProfile'
 AUTHENTICATION_BACKENDS = [
     'user_app.users.ConsumerBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
+</code></pre>
 
 End edit login url
-LOGIN_URL = '/you-site/login/'
+`LOGIN_URL = '/you-site/login/'`
