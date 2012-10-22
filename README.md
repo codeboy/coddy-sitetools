@@ -39,6 +39,7 @@ For work you will need:
 
 * django-taggit - https://github.com/alex/django-taggit.git
 * django-taggit-templatetags - https://github.com/feuervogel/django-taggit-templatetags.git
+* django-settings - https://github.com/jqb/django-settings.git
 
 You can install it like pip install -r project-directory/requirements/dev.txt
 

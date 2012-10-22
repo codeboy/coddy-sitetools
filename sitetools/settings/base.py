@@ -31,9 +31,9 @@ LANGUAGES = (
     )
 
 SITE_ID = 1
-ROOT_URLCONF = 'projectile.urls'
+ROOT_URLCONF = 'sitetools.urls'
 
-REFERENCE_NAME = 'projectile'
+REFERENCE_NAME = 'sitetools'
 INSTALLED_APPS = [
     # Template apps
     #'jingo_minify',
@@ -61,6 +61,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     #'debug_toolbar_user_panel',
     #'memcache_toolbar',
+    'taggit',
+    'taggit_templatetags',
+    'django_settings',
 
     # Database migrations
     'south',
@@ -68,8 +71,9 @@ INSTALLED_APPS = [
     # Application base, containing global templates.
 
     # Local apps, referenced via REFERENCE_NAME.appname
-    'sitetools.coddy-site',
-    'sitetools.coddy-blog',
+    'sitetools.coddy_site',
+    'sitetools.coddy_blog',
+    'sitetools.coddy_auth',
 ]
 
 # Place bcrypt first in the list, so it will be the default password hashing
@@ -193,11 +197,11 @@ FILE_UPLOAD_PERMISSIONS = 0664
 # The WSGI Application to use for runserver
 #WSGI_APPLICATION = 'c300.wsgi.application'
 
-#CUSTOM_USER_MODEL = 'projectile.consumers.ConsumerProfile'
+#CUSTOM_USER_MODEL = 'sitetools.consumers.ConsumerProfile'
 LOGIN_URL = '/coddy-site/login/'
 
-AUTH_PROFILE_MODULE = 'projectile.consumers.ConsumerProfile'
+AUTH_PROFILE_MODULE = 'sitetools.consumers.ConsumerProfile'
 AUTHENTICATION_BACKENDS = [
-    'projectile.consumers.ConsumerBackend',
+    'sitetools.consumers.ConsumerBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]

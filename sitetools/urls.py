@@ -12,20 +12,14 @@ def bad(request):
     1 / 0
 
 
-from projectile.baseapp.test_api import TestApi
-api = TestApi()
-from projectile.jproject.api_project import ProjectApi
-project_api = ProjectApi()
 
 urlpatterns = patterns('',
-    (r'', include('projectile.baseapp.urls', namespace='base')),
+    (r'', include('sitetools.coddy_site.urls', namespace='site')),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
     #url(r'^', include('debug_toolbar_user_panel.urls')),
     (r'^bad/$', bad),
 
-    (r'^api-test/', include(api.urls)),
-    (r'^api-project/', include(project_api.urls)),
 )
 
 

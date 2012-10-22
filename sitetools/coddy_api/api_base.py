@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils import simplejson
 from django.utils.cache import patch_cache_control
 
-from projectile.apidriver.api_resource import ResourceOptions
-from projectile.apidriver.api_request import ApiRequest
+from api_resource import ResourceOptions
+from api_request import ApiRequest
 
 try:
     from tastypie.resources import Resource
