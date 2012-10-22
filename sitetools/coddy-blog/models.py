@@ -65,26 +65,3 @@ class Post(m.Model):
 
 
 
-class Tag(m.Model):
-    name = m.CharField(
-        max_length=225,
-        verbose_name=_('name'),
-        help_text=_('tag name'),
-        unique=True,)
-    name_slug = m.SlugField(
-        max_length=250,
-        unique=True,
-        verbose_name=_('name slug'),
-        help_text=_('slug for URL'),)
-
-    class Meta:
-        verbose_name, verbose_name_plural = _(u'Tag'), _(u'Tags')
-
-    def __unicode__(self):
-        return self.name
-
-    def save(self, *args, **kwargs):
-        if self.name_slug is None:
-            self.name_slug = slugify(self.name)
-        super(Tag, self).save(*args, **kwargs)
-

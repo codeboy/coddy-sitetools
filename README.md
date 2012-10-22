@@ -1,8 +1,9 @@
 coddy-sitetools
 ===============
 
-Tools for my site, like - blog, cms, twitter aggregation, open social and other cool stuff :)
+Tools that i used for develop sites, like - blog, cms, twitter aggregation, open social and other cool stuff :)
 Work in progress. I planed make some stable version in future.
+Some docs in russian in ...
 
 
 ## About this project.
@@ -12,11 +13,14 @@ Here's a list:
 * coddy-site : application that keep everything working together
 * coddy-blog : i think this is a blog app
 
+will be done soon:
+* coddy-shop
+* coddy-catalog
+
 I add implementations for some popular apps.
 
 There are things that i just plan to add in the future:
 * authority - user profiles and authorisation tools
-* catalog - catalog i guess
 * imaginary - tool that i used for work with images
 * userpic - app for generate and add logo for users
 * links - links aggregator
@@ -32,6 +36,9 @@ For work you will need:
 * django-treebeard
 * django-debug-toolbar
 * django-crispy_forms
+
+* django-taggit - https://github.com/alex/django-taggit.git
+* django-taggit-templatetags - https://github.com/feuervogel/django-taggit-templatetags.git
 
 You can install it like pip install -r project-directory/requirements/dev.txt
 
