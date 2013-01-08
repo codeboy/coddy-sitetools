@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block page-title %}
+    <h1>Card game</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <p>Main page</p>
+{#    {% url sitetools.cardgame.deck-view %}#}
+    {% url test2 %}
+
+    {% for deck in decks %}
+{#        <a href="{% url 'deck-view' %}{{ deck.id }}"><b>{{ deck.name }}</b></a>, count: {{ deck.cards.count }}<br/>#}
+        <table>
+        {% for card in deck.cards.all %}
+            <tr>
+                <td style="width:60px; text-align:center;"><img src="{{ STATIC_URL }}cards/{{ card.image }}.jpg" alt="" style="width:30px;"></td>
+                <td>{{ card.name }}</td>
+            </tr>
+        {%  endfor %}
+        </table>
+    {% endfor %}
+    <hr/>
+
+{% endblock %}

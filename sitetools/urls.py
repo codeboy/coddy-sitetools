@@ -15,10 +15,12 @@ def bad(request):
 
 urlpatterns = patterns('',
     (r'', include('sitetools.coddy_site.urls', namespace='site')),
+    (r'^card/', include('sitetools.cardgame.urls', namespace='card')),
+
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
     #url(r'^', include('debug_toolbar_user_panel.urls')),
-    (r'^bad/$', bad),
+    url(r'^bad/$', bad, name='test2'),
 
 )
 

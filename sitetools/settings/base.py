@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     'sitetools.coddy_site',
     'sitetools.coddy_blog',
     'sitetools.coddy_auth',
+    'sitetools.cardgame',
 ]
 
 # Place bcrypt first in the list, so it will be the default password hashing
@@ -202,6 +203,6 @@ LOGIN_URL = '/coddy-site/login/'
 
 AUTH_PROFILE_MODULE = 'sitetools.consumers.ConsumerProfile'
 AUTHENTICATION_BACKENDS = [
-    'sitetools.consumers.ConsumerBackend',
+#    'sitetools.consumers.ConsumerBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
